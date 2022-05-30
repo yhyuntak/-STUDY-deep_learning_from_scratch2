@@ -30,3 +30,4 @@ model = TwoLayerNet(2,4,3)
 s = model.predict(x)
 
 print(s)
+
