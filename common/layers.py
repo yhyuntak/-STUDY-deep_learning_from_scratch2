@@ -68,12 +68,12 @@ class MatMul:
         self.x = None
 
     def forward(self,x):
-        W = self.params
+        W, = self.params
         self.x = x
         out = np.matmul(x,W)
         return out
     def backward(self,dout):
-        W = self.params
+        W, = self.params
         dx = np.matmul(dout,W.T)
         dW = np.matmul(self.x.T,dout)
         self.grads[0][...]=dW
