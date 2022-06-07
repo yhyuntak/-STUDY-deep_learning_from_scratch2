@@ -1,4 +1,4 @@
-import numpy as np
+from common.np import *
 
 class SGD :
 
@@ -125,6 +125,7 @@ class Adam:
         lr_t = self.lr * np.sqrt(1.0 - self.beta2 ** self.iter) / (1.0 - self.beta1 ** self.iter)
 
         for i in range(len(params)):
+
             self.m[i] += (1 - self.beta1) * (grads[i] - self.m[i])
             self.v[i] += (1 - self.beta2) * (grads[i] ** 2 - self.v[i])
 
