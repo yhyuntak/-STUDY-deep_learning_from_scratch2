@@ -128,8 +128,6 @@ def convert_one_hot(corpus, vocab_size):
 
     return one_hot
 
-
-
 def clip_grads(grads, max_norm):
     total_norm = 0
     for grad in grads:
@@ -139,7 +137,6 @@ def clip_grads(grads, max_norm):
     if rate < 1:
         for grad in grads:
             grad *= rate
-
 
 def to_cpu(x):
     import numpy

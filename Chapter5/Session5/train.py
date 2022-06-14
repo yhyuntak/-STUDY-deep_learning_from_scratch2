@@ -1,5 +1,5 @@
 import sys
-sys.path.append('..')
+sys.path.append('../..')
 from common.optimizer import SGD
 from common.trainer import RnnlmTrainer
 from dataset import ptb
